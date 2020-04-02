@@ -29,8 +29,11 @@ https://python-poetry.org/docs/
 
 - Getting a Venv up and running is easier with Poetry versus a MAKE process, running the ``shell`` command is more intuitive.
 
+- You can add dev only dependenccies like so, these will not be packaged during a build - ``poetry add --dev pytest pytest-cov pytest-django pytest-xdist``
 
+- You can run tests using the command ``poetry run pytest``
 
+- You can configure Poetry to run scripts according to a command outlined the the 'toml' file e.g. ``Poetry run entry`` which runs dummy entry point code.
 
 ## Dev Notes
 
@@ -48,12 +51,7 @@ https://python-poetry.org/docs/
 - Is Poetry equally suitable for production and EDA / iteration?
     - ANSWER: It will run notebooks etc. fine.
 
-- How to run Tests? (Do I need a MAKEFILE that can be ran inside the venv?)
-
 - Does Poetry play nice with CI?
-
-- How to develop in a Poetry venv?
-
 
 ## Ideas
 
@@ -61,3 +59,7 @@ https://python-poetry.org/docs/
     - Github Actions? Travis CI? DVC? ...
 
 - Poetry needs a 'test' command, which spins up the venv and runs the unit tests via your given test framework.
+
+- CI Github Actions with poetry:
+
+https://medium.com/@vanflymen/blazing-fast-ci-with-github-actions-poetry-black-and-pytest-9e74299dd4a5
