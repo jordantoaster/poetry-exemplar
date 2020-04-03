@@ -8,7 +8,9 @@ https://python-poetry.org/docs/
 
 2. Clone the repository.
 
-3. 
+3. Run ``poetry install`` in the project root via terminal.
+
+4. Run ``poetry shell`` to activate your virtual environment, you can now develop as required.
 
 
 ## Use
@@ -57,8 +59,6 @@ https://python-poetry.org/docs/
 
 - Can I extend This Poetry projects?
     - Github Actions? Travis CI? DVC? ...
-
-- Poetry needs a 'test' command, which spins up the venv and runs the unit tests via your given test framework.
 
 - CI Github Actions with poetry:
 
