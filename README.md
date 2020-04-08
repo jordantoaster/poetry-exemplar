@@ -13,6 +13,16 @@ https://python-poetry.org/docs/
 4. Run ``poetry shell`` to activate your virtual environment, you can now develop as required.
 
 
+## Build & Publish
+
+If you run ``poetry build`` inside your package, it will create a PyPi ready .tar.gz file (or a .whl) in your ``dist`` folder that can pip installed.
+
+If you have this project in another projects folder, you can pip install as ``pip install local_pypi/poetry-exemplar-0.1.0.tar.gz ``.
+
+This can then be used in any file as ``from poetry_exemplar.add_one import add_one`` and use the function as ``add_one(2)``
+
+If you run ``poetry publish`` and you have configured a repository with suitable credentials, it will push the package to a remote store. This can be pip installed with a suitable index.
+
 ## Use
 
 - Running ``poetry add <DEPENDENCY>`` has to default behaviour to find the dependency on PyPi and to insert it into the relavent section in the ``pyproject.toml`` file.
@@ -25,7 +35,7 @@ https://python-poetry.org/docs/
 
 - If you want to have a 'src' folder you can run ``poetry new --src my-package``
 
-- The ```remove`` command removes a package from the current list of installed packages.
+- The ``remove`` command removes a package from the current list of installed packages.
 
 - The ``shell`` command spawns a shell, according to the ``$SHELL`` environment variable, within the virtual environment. If one doesn't exist yet, it will be created. Inside a shell if you run ``exit`` you will leave the shell. Running ``poetry shell`` is also the easiest way to activate the venv for use.
 
@@ -36,6 +46,8 @@ https://python-poetry.org/docs/
 - You can run tests using the command ``poetry run pytest``
 
 - You can configure Poetry to run scripts according to a command outlined the the 'toml' file e.g. ``Poetry run entry`` which runs dummy entry point code.
+
+- You can add versioning via ``poetry version patch`` or ``poetry version minor`` etc.
 
 ## Dev Notes
 
